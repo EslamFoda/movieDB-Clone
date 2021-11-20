@@ -1,0 +1,77 @@
+.logo {
+  background-image: linear-gradient(
+    to right,
+    rgba(30, 213, 169, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.footer-icons {
+  display: flex;
+}
+.footer-icons img {
+  width: 1rem;
+  height: 1rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid #25e083;
+  border-top: 1px solid rgba(0, 0, 0, 0.186);
+  background: rgb(3, 36, 63);
+  color: white;
+}
+.footer-box-left {
+  padding: 1.3rem 1rem;
+  line-height: 1.5;
+}
+.footer-icons {
+  margin: 2rem 0;
+}
+.footer-icons img {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.footer-box {
+  padding: 0 0.5rem;
+  padding: 1rem 1rem;
+}
+.footer-box h5 {
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin: 0.7rem 0;
+}
+.footer-box h5:hover {
+  cursor: pointer;
+  color: #25e083;
+}
+.footer-line {
+  width: 2rem;
+  height: 1px;
+  background-color: #25e083;
+  margin: 0.5rem 0 1.5rem 0;
+}
+.myName {
+  color: gray;
+  cursor: pointer;
+}
+.myName:hover {
+  border-bottom: 1px solid #25e083;
+}
+.vue {
+  color: rgb(20, 199, 136);
+}
+.footer-bottom {
+  padding: 1rem 1rem;
+  background: rgb(3, 36, 63);
+  color: white;
+}

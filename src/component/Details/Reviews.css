@@ -1,0 +1,23 @@
+.review {
+  border-bottom: 2px solid rgb(15, 232, 131);
+}
+.review-img-container {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.review-img-container img {
+  height: 100%;
+  width: 100%;
+}
+.single-review {
+  display: flex;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.349);
+}
+.reviews-list {
+  padding: 0 2.5rem;
+}

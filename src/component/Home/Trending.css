@@ -1,0 +1,33 @@
+.trending-container {
+  background: linear-gradient(
+    to right,
+    rgb(0, 211, 98) 0%,
+    rgb(7, 179, 170) 100%
+  );
+}
+.today-wrapper {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.today {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+.today-active {
+  background-image: linear-gradient(
+    to right,
+    rgba(30, 213, 169, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.wrap-active {
+  background-color: #032541;
+  transition: all 0.5s ease;
+}

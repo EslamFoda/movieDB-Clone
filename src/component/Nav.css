@@ -1,0 +1,17 @@
+nav{
+    background: rgb(3, 36, 63);
+}
+.nav-flex{
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+.nav-flex img{
+  margin-right: .5rem;
+}
+.nav-flex a,.nav-flex span {
+  margin-right: 2rem;
+  font-weight: bold;
+  font-size: .9rem;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.singleCast {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.349);
+}
+.cast-orginalname {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.cast-details {
+  padding: 0.4rem;
+  line-height: 1.2;
+}
+.cast-img-container {
+  height: 230px;
+}
+.cast-img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}

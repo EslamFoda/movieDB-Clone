@@ -1,0 +1,106 @@
+.popular-cont {
+  background-image: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.Popular-section {
+  padding: 2.3rem 2.5rem;
+}
+.ontv-wrapper {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.img-shadow {
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.247);
+}
+.ontv {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+.ontv-active {
+  background-image: linear-gradient(
+    to right,
+    rgba(30, 213, 169, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.wrapper-active {
+  background-color: #032541;
+  transition: all 0.5s ease;
+}
+.ontv-flex {
+  display: flex;
+  align-items: center;
+}
+.pouplerSlider {
+  padding-bottom: 1.3rem;
+  padding-top: 1rem;
+}
+.ontv-flex h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.ontv-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3rem;
+}
+
+.show-img-container {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+}
+.show-img-container img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.274);
+}
+.rate-container {
+  background-color: #032541;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid rgba(30, 213, 169, 1);
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0.5rem;
+  z-index: 1561561;
+}
+.rate {
+  color: white;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+.show-name-date {
+  margin-top: 1.5rem;
+  width: fit-content;
+}
+.show-name {
+  font-size: 1rem;
+  font-weight: bold;
+  width: fit-content;
+  width: moz-fit-content;
+  display: inline;
+}
+.show-name:hover {
+  color: rgb(0, 0, 0);
+}
+.link {
+  width: fit-content;
+  width: moz-fit-content;
+}
