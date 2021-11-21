@@ -21,8 +21,38 @@ const Recommends = ({ recommends }) => {
       <div className="px-2">
         {" "}
         <Swiper
-          spaceBetween={20}
-          slidesPerView={4.5}
+          breakpoints={{
+            280: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+            320: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+            414: {
+              slidesPerView: 2.2,
+              spaceBetween: 5,
+            },
+            492: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            // when window width is >= 480px
+            663: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3.2,
+              spaceBetween: 10,
+            },
+            // when window width is >= 640px
+            1025: {
+              slidesPerView: 4.2,
+              spaceBetween: 10,
+            },
+          }}
           scrollbar={{
             hide: true,
           }}
@@ -54,7 +84,7 @@ const Recommends = ({ recommends }) => {
                     <span
                       onClick={() => {
                         navigate(`/movie/${recommend.id}`);
-                        window.scroll(0, 0);
+                        window.scroll({top:0,behavior:'smooth'});
                       }}
                       className="font-bold text-black text-xs pb-4 pt-2 show-name cursor-pointer"
                     >

@@ -19,15 +19,46 @@ const Credits = ({ credits }) => {
       <div className="px-2">
         <Swiper
           className="pouplerSlider"
-          spaceBetween={20}
-          slidesPerView={7}
+          breakpoints={{
+            280: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            320: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            414: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            492: {
+              slidesPerView: 3.2,
+              spaceBetween: 10,
+            },
+            // when window width is >= 480px
+            663: {
+              slidesPerView: 4.2,
+              spaceBetween: 10,
+            },
+
+            769: {
+              slidesPerView: 5.2,
+              spaceBetween: 20,
+            },
+            // when window width is >= 640px
+            1025: {
+              slidesPerView: 7.2,
+              spaceBetween: 20,
+            },
+          }}
           scrollbar={{
             hide: true,
           }}
         >
           {credits.map((cast) => (
             <SwiperSlide key={cast.id}>
-              <div className="singleCast">
+              <div className="singleCast" style={{marginBottom:'1rem',marginTop:'1rem'}}>
                 <div className="cast-img-container">
                   {cast.profile_path ? (
                     <img

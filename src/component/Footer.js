@@ -41,7 +41,7 @@ const Footer = () => {
         <p>
           © Copyright 2021 | Made By{" "}
           <span className="myName">Eslam Mohamed.</span> Powered by{" "}
-          <span className="vue">Next js</span>.
+          <span className="vue">React js</span>.
         </p>
       </div>
     </div>

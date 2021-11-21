@@ -1,56 +1,11 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
 import { Link } from "react-router-dom";
-// import Swiper core and required modules
-import SwiperCore, { Scrollbar } from "swiper";
-
-// install Swiper modules
-SwiperCore.use([Scrollbar]);
-const ShowCard = ({ shows }) => {
+const Cards = ({ shows }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
-    <Swiper
-      className="pouplerSlider"
-      scrollbar={{
-        hide: true,
-      }}
-      breakpoints={{
-        280: {
-          slidesPerView: 2.2,
-          spaceBetween: 10,
-        },
-        320: {
-          slidesPerView: 2.2,
-          spaceBetween: 10,
-        },
-        414: {
-          slidesPerView: 2.2,
-          spaceBetween: 10,
-        },
-        492: {
-          slidesPerView: 3.2,
-          spaceBetween: 10,
-        },
-        // when window width is >= 480px
-        663: {
-          slidesPerView: 4.2,
-          spaceBetween: 10,
-        },
-
-        769: {
-          slidesPerView: 5.2,
-          spaceBetween: 20,
-        },
-        // when window width is >= 640px
-        1025: {
-          slidesPerView: 7.2,
-          spaceBetween: 20,
-        },
-      }}
-    >
+    <>
       {shows &&
         shows.map((show) => (
-          <SwiperSlide className='slide' key={show.id}>
+          <div key={show.id}>
             <div className="singleShow">
               {" "}
               {show.name ? (
@@ -101,10 +56,10 @@ const ShowCard = ({ shows }) => {
                 )}
               </div>
             </div>
-          </SwiperSlide>
+          </div>
         ))}
-    </Swiper>
+    </>
   );
 };
 
-export default ShowCard;
+export default Cards;

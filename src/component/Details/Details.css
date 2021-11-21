@@ -7,10 +7,8 @@
     rgb(0, 211, 98) 0%,
     rgb(7, 179, 170) 100%
   );
-  background-repeat: no-repeat;
   padding: 1rem;
 }
-
 .film-left {
   border-radius: 0.4rem;
   overflow: hidden;
@@ -68,10 +66,31 @@ H4 {
 .recommend-img-container {
   border-radius: 0.5rem;
   overflow: hidden;
-  height: 200px;
 }
 .recommend-img-container img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 562px) {
+  .film-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav {
+    font-size: smaller;
+  }
+  .nav h4 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 356px) {
+  .nav {
+    margin: 0.5rem 0;
+  }
+  .nav h4 {
+    font-size: 0.7rem;
+  }
+  .header {
+    font-size: 1.4rem;
+  }
 }

@@ -1,0 +1,20 @@
+.allmovies-grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 1.5rem;
+    margin: 1rem 0 2rem 0;
+}
+.someShadow{
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.37);
+    border-radius: .4rem;
+}
+.loadmore{
+    background: rgb(0, 183, 255);
+    display: block;
+    color: white;
+    width: 100%;
+    padding: .7rem 0;
+    border-radius: .7rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
