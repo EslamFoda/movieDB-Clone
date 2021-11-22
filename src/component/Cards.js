@@ -1,6 +1,7 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 const Cards = ({ shows }) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
     <>
       {shows &&
@@ -11,10 +12,11 @@ const Cards = ({ shows }) => {
               {show.name ? (
                 <Link to={`/tv/${show.id}`}>
                   <div className="show-img-container">
-                    <img
+                    <LazyLoadImage
+                      effect="blur"
                       src={
-                        `${BASE_URL}${show.poster_path}` ||
-                        `${BASE_URL}${show.backdrop_path}`
+                        `https://image.tmdb.org/t/p/w500${show.poster_path}` ||
+                        `https://image.tmdb.org/t/p/w500${show.backdrop_path}`
                       }
                       alt=""
                     />
@@ -26,10 +28,11 @@ const Cards = ({ shows }) => {
               ) : (
                 <Link to={`/movie/${show.id}`}>
                   <div className="show-img-container">
-                    <img
+                    <LazyLoadImage
+                      effect="blur"
                       src={
-                        `${BASE_URL}${show.poster_path}` ||
-                        `${BASE_URL}${show.backdrop_path}`
+                        `https://image.tmdb.org/t/p/w500${show.poster_path}` ||
+                        `https://image.tmdb.org/t/p/w500${show.backdrop_path}`
                       }
                       alt=""
                     />

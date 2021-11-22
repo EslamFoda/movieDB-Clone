@@ -1,76 +1,73 @@
-.film-grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 1rem;
-  background: linear-gradient(
-    to right,
-    rgb(0, 211, 98) 0%,
-    rgb(7, 179, 170) 100%
-  );
-  padding: 1rem;
+.film-grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    background: linear-gradient(to right, rgb(0, 211, 98) 0%, rgb(7, 179, 170) 100%);
+    padding: 1rem;
+
 }
-.film-left {
-  border-radius: 0.4rem;
-  overflow: hidden;
+.film-left{
+    border-radius: .4rem;
+    overflow:hidden;
 }
-p {
-  line-height: 1.5;
-  font-weight: bold;
+p{
+    line-height: 1.5;
+    font-weight: bold;
 }
-.vote {
-  background: rgb(15, 232, 131);
-  display: inline-block;
-  border-radius: 50%;
+.vote{
+    background: rgb(15, 232, 131);
+    display: inline-block;
+    border-radius: 50%;
 }
 
-H4 {
-  background: rgb(19, 221, 167);
-  display: inline;
-  padding: 1rem;
-  margin-right: 1rem;
-  border-radius: 2rem;
-  cursor: pointer;
+H4{
+    background: rgb(19, 221, 167);
+    display: inline;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
 }
-.nav {
-  display: flex;
-  align-items: center;
+.nav{
+    display: flex;
+    align-items: center;
+    
 }
-.tv-name {
-  font-size: 1.5rem;
-  color: black;
-  font-weight: bolder;
+.tv-name{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bolder;
 }
-.film-right {
-  padding: 2rem 1rem;
+.film-right{
+    padding: 2rem 1rem; 
 }
-.vote-container {
-  background-color: #032541;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid rgb(74, 243, 204);
-  height: 2.5rem;
-  width: 2.5rem;
-  z-index: 1561561;
+.vote-container{
+    background-color: #032541;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgb(74, 243, 204);
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 1561561;
 }
-.vote-tv {
-  color: white;
-  display: inline-block;
-  margin-top: 0.4rem;
+.vote-tv{
+    color: white;
+    display: inline-block;
+    margin-top: .4rem;
 }
-.creator-tv-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+.creator-tv-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
 }
-.recommend-img-container {
-  border-radius: 0.5rem;
-  overflow: hidden;
-  cursor: pointer;
+.recommend-img-container{
+    border-radius: .5rem;
+    overflow: hidden;
 }
-.recommend-img-container img {
-  width: 100%;
-  object-fit: cover;
+.recommend-img-container img{
+    width: 100%;
+    object-fit: cover;
 }
 
 @media only screen and (max-width: 562px) {

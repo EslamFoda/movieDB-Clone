@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useNavigate } from "react-router-dom";
 import "swiper/swiper-bundle.css";
 // import Swiper core and required modules
@@ -10,7 +11,7 @@ SwiperCore.use([Scrollbar]);
 
 const Recommends = ({ recommends }) => {
   const navigate = useNavigate();
-  const BASE_URL = "https://image.tmdb.org/t/p/original";
+
   return (
     <div className="recommends-container ">
       <div className="Popular-section">
@@ -62,14 +63,18 @@ const Recommends = ({ recommends }) => {
               <div className="single-recommend">
                 {recommend.name ? (
                   <div
+                    style={{ cursor: "pointer" }}
                     className="recommend-img-container"
                     onClick={() => {
                       navigate(`/tv/${recommend.id}`);
                       window.scroll({ top: 0, behavior: "smooth" });
                     }}
                   >
-                    <img
-                      src={`${BASE_URL}${
+                    <LazyLoadImage
+                      effect="blur"
+                      width="100%"
+                      height="100%"
+                      src={`https://image.tmdb.org/t/p/w250_and_h141_face${
                         recommend.backdrop_path || recommend.poster_path
                       }`}
                       alt=""
@@ -78,13 +83,17 @@ const Recommends = ({ recommends }) => {
                 ) : (
                   <div
                     className="recommend-img-container"
+                    style={{ cursor: "pointer" }}
                     onClick={() => {
                       navigate(`/movie/${recommend.id}`);
                       window.scroll({ top: 0, behavior: "smooth" });
                     }}
                   >
-                    <img
-                      src={`${BASE_URL}${
+                    <LazyLoadImage
+                      effect="blur"
+                      width="100%"
+                      height="100%"
+                      src={`https://image.tmdb.org/t/p/w250_and_h141_face${
                         recommend.backdrop_path || recommend.poster_path
                       }`}
                       alt=""

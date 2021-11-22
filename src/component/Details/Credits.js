@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import user from "../../assets/user.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./Credits.css";
 import "swiper/swiper-bundle.css";
 // import Swiper core and required modules
@@ -58,10 +60,14 @@ const Credits = ({ credits }) => {
         >
           {credits.map((cast) => (
             <SwiperSlide key={cast.id}>
-              <div className="singleCast" style={{marginBottom:'1rem',marginTop:'1rem'}}>
+              <div
+                className="singleCast"
+                style={{ marginBottom: "1rem", marginTop: "1rem" }}
+              >
                 <div className="cast-img-container">
                   {cast.profile_path ? (
-                    <img
+                    <LazyLoadImage
+                      effect="blur"
                       src={`https://image.tmdb.org/t/p/w400${cast.profile_path}`}
                       alt=""
                     />

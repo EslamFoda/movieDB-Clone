@@ -1,19 +1,26 @@
 import "./Details.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const ShowDetails = ({ tv }) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
     <div className="backdrop-container">
       <div className="film-grid">
         <div className="film-left">
           {tv.poster_path ? (
-            <img
-              src={`${BASE_URL}${tv.poster_path || tv.backdrop_path}`}
+            <LazyLoadImage
+              effect="blur"
+              src={`https://image.tmdb.org/t/p/w500${
+                tv.poster_path || tv.backdrop_path
+              }`}
               alt=""
             />
           ) : (
-            <img
+            <imgLazyLoadImage
+              effect="blur"
               className="bg-gray-300 h-full"
-              src={`${BASE_URL}${tv.poster_path || tv.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/w500${
+                tv.poster_path || tv.backdrop_path
+              }`}
               alt=""
             />
           )}

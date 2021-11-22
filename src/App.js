@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+
 import "./App.css";
+import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import TvDetails from "./pages/TvDetails";
 import Movies from "./pages/Movies";
 import Search from "./pages/Search";
 import Tv from "./pages/Tv";
+
 function App() {
   return (
     <div className="App">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const SearchCards = ({ results, page }) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
     <>
       <div>
@@ -9,14 +10,16 @@ const SearchCards = ({ results, page }) => {
             <div className="left-result">
               <div className="result-img-container">
                 {result.poster_path || result.backdrop_path ? (
-                  <img
-                    src={`${BASE_URL}${
+                  <LazyLoadImage
+                    effect="blur"
+                    src={`https://image.tmdb.org/t/p/w94_and_h141_bestv2${
                       result.poster_path || result.backdrop_path
                     }`}
                     alt=""
                   />
                 ) : (
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
                     className="bg-gray-200"
                     src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg"
                     alt=""
@@ -61,7 +64,9 @@ const SearchCards = ({ results, page }) => {
                 </span>
               ) : (
                 <div>
-                  <span className="blabla mt-5 block">There is no description yet.</span>
+                  <span className="blabla mt-5 block">
+                    There is no description yet.
+                  </span>
                 </div>
               )}
             </div>

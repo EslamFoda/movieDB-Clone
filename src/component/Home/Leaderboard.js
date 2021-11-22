@@ -1,4 +1,6 @@
 import "./Leaderboard.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const Leaderboard = () => {
   return (
     <div className="leaderboard-container">
@@ -19,7 +21,8 @@ const Leaderboard = () => {
         <div className="leaderboard-left">
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://www.themoviedb.org/t/p/w64_and_h64_face/A1pIXQZD86MzfP5pvr37C68YiGv.jpg"
                 alt=""
               />
@@ -38,7 +41,8 @@ const Leaderboard = () => {
           </div>
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://www.themoviedb.org/t/p/w64_and_h64_face/6ekZQXHUms5hXLr4nqLlQLoQEge.jpg"
                 alt=""
               />
@@ -95,7 +99,8 @@ const Leaderboard = () => {
           </div>
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://www.themoviedb.org/t/p/w64_and_h64_face/tPJMP5E6HaU7pF3xAYWLzuuwwR1.jpg"
                 alt=""
               />
@@ -116,7 +121,8 @@ const Leaderboard = () => {
         <div className="leaderboard-right">
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://secure.gravatar.com/avatar/3e88721993c8eb0fbb11793d32445f43.jpg?s=64"
                 alt=""
               />
@@ -135,7 +141,8 @@ const Leaderboard = () => {
           </div>
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://www.themoviedb.org/t/p/w64_and_h64_face/hjvyN4SrXqXy316GkbOshW8sGXJ.jpg"
                 alt=""
               />
@@ -154,7 +161,8 @@ const Leaderboard = () => {
           </div>
           <div className="single-person">
             <div className="person-img-container">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src="https://www.themoviedb.org/t/p/w64_and_h64_face/5BvxGhRE7yjtbHCXgrTxPk9hBXp.jpg"
                 alt=""
               />
