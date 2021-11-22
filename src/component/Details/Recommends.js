@@ -60,21 +60,44 @@ const Recommends = ({ recommends }) => {
           {recommends.map((recommend) => (
             <SwiperSlide key={recommend.id} className="pb-4">
               <div className="single-recommend">
-                <div className="recommend-img-container">
-                  <img
-                    src={`${BASE_URL}${
-                      recommend.backdrop_path || recommend.poster_path
-                    }`}
-                    alt=""
-                  />
-                </div>
+                {recommend.name ? (
+                  <div
+                    className="recommend-img-container"
+                    onClick={() => {
+                      navigate(`/tv/${recommend.id}`);
+                      window.scroll({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <img
+                      src={`${BASE_URL}${
+                        recommend.backdrop_path || recommend.poster_path
+                      }`}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="recommend-img-container"
+                    onClick={() => {
+                      navigate(`/movie/${recommend.id}`);
+                      window.scroll({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <img
+                      src={`${BASE_URL}${
+                        recommend.backdrop_path || recommend.poster_path
+                      }`}
+                      alt=""
+                    />
+                  </div>
+                )}
 
                 <div>
                   {recommend.name ? (
                     <span
                       onClick={() => {
                         navigate(`/tv/${recommend.id}`);
-                        window.scroll(0, 0);
+                        window.scroll({ top: 0, behavior: "smooth" });
                       }}
                       className="font-bold text-black text-xs pb-4 pt-2 show-name cursor-pointer"
                     >
@@ -84,7 +107,7 @@ const Recommends = ({ recommends }) => {
                     <span
                       onClick={() => {
                         navigate(`/movie/${recommend.id}`);
-                        window.scroll({top:0,behavior:'smooth'});
+                        window.scroll({ top: 0, behavior: "smooth" });
                       }}
                       className="font-bold text-black text-xs pb-4 pt-2 show-name cursor-pointer"
                     >

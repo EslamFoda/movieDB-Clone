@@ -9,24 +9,24 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.slide{
+.slide {
   margin: 1rem 0;
 }
 @media only screen and (max-width: 1024px) {
   .leaderboard-container {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem !important;
   }
   .allmovies-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    margin: 1rem 0 2rem 0;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1rem !important;
+    margin: 1rem 0 2rem 0 !important;
   }
 }
 
 @media only screen and (max-width: 1014px) {
   .leaderboard-main {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 0.5rem !important;
   }
   .allmovies-grid {
     grid-template-columns: repeat(5, 1fr) !important;
@@ -36,7 +36,7 @@ html {
 @media only screen and (max-width: 1000px) {
   .allmovies-grid {
     grid-template-columns: repeat(4, 1fr) !important;
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 2rem 0 !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -44,10 +44,10 @@ html {
     font-size: 75%;
   }
   .Popular-section {
-    padding: 1rem;
+    padding: 1rem !important;
   }
   .reviews-list {
-    padding: 0 1rem;
+    padding: 0 1rem !important;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -58,102 +58,105 @@ html {
 }
 @media only screen and (max-width: 583px) {
   .footer-top {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0rem;
-    border-bottom: 1px solid #25e083;
-    border-top: 1px solid rgba(0, 0, 0, 0.186);
-    background: rgb(3, 36, 63);
-    color: white;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0rem !important;
+    border-bottom: 1px solid #25e083 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.186) !important;
+    background: rgb(3, 36, 63) !important;
+    color: white !important;
   }
   .footer-box {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem !important;
+  }
+  .cast-img-container {
+    height: 200px !important;
   }
 }
 
 @media only screen and (max-width: 479px) {
   .nav-flex {
-    display: flex;
-    align-items: center;
-    padding: 1rem 1rem;
+    display: flex !important;
+    align-items: center !important;
+    padding: 1.5rem 1rem !important;
   }
   .nav-flex a {
-    margin-right: 1rem;
-    font-weight: bold;
-    font-size: 0.9rem;
+    margin-right: 1rem !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
   }
 }
 
 @media only screen and (max-width: 429px) {
   .leaderboard-container {
-    padding: 1rem 1rem;
+    padding: 1rem 1rem !important;
   }
-  .show-img-container{
-    height: 200px;
+  .show-img-container {
+    height: 200px !important;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .welcome-header {
-    font-size: 1.9rem;
-    color: white;
-    font-weight: bold;
+    font-size: 1.9rem !important;
+    color: white !important;
+    font-weight: bold !important;
   }
   .para-hero {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
   }
   .search-container {
-    margin-top: 2rem;
+    margin-top: 2rem !important;
   }
   .hero {
     padding: 1rem !important;
   }
   .footer-bottom p {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
   .allmovies-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem;
-    margin: 1rem 0 2rem 0;
+    gap: 1rem !important;
+    margin: 1rem 0 2rem 0 !important;
   }
   .blabla {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
   .result-img-container {
-    height: 100%;
+    height: 100% !important;
   }
   .search-section {
-    padding: 1rem;
+    padding: 1rem !important;
   }
   .film-grid {
-    gap: 0;
+    gap: 0 !important;
   }
   .film-left {
-    height: 450px;
+    height: 450px !important;
   }
   .film-left img {
-    height: 100%;
-    width: 100%;
+    height: 100% !important;
+    width: 100% !important;
   }
 
   .film-right {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem !important;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .film-left {
-    height: 400px;
+    height: 400px !important;
   }
 }
 @media only screen and (max-width: 320px) {
   .leaderboard-score {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
   }
   .footer-bottom p {
-    font-size: 0.7rem;
+    font-size: 0.7rem !important;
   }
   .footer-box h5 {
     margin: 0.4rem 0 !important;

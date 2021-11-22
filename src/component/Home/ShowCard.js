@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import Spinner from "../Spinner";
 import "swiper/swiper-bundle.css";
 import { Link } from "react-router-dom";
 // import Swiper core and required modules
@@ -48,9 +49,9 @@ const ShowCard = ({ shows }) => {
         },
       }}
     >
-      {shows &&
+      {shows ? (
         shows.map((show) => (
-          <SwiperSlide className='slide' key={show.id}>
+          <SwiperSlide className="slide" key={show.id}>
             <div className="singleShow">
               {" "}
               {show.name ? (
@@ -102,7 +103,10 @@ const ShowCard = ({ shows }) => {
               </div>
             </div>
           </SwiperSlide>
-        ))}
+        ))
+      ) : (
+        <Spinner />
+      )}
     </Swiper>
   );
 };

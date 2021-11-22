@@ -1,4 +1,4 @@
-import './Details.css'
+import "./Details.css";
 const ShowDetails = ({ tv }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
@@ -56,10 +56,10 @@ const ShowDetails = ({ tv }) => {
             }`}</h2>
           )}
           <h2 className="font-bold text-black text-xl mb-3">Overview</h2>
-          <p className="font-thin text-base text-black opacity-90">
+          <p className="font-normal text-base text-black opacity-90">
             {tv.overview}
           </p>
-          <p className="font-thin text-base text-black opacity-90">
+          <p className="font-normal text-base text-black opacity-90">
             We dont have an overview translated in English. Help us expand our
             database by adding one.
           </p>
@@ -68,7 +68,7 @@ const ShowDetails = ({ tv }) => {
               tv.created_by.map((creator) => (
                 <div v-for="creator in tv.created_by" key={creator.id}>
                   <h1 className="font-bold text-black">{creator.name}</h1>
-                  <h1 className="font-thin text-base text-black opacity-90">
+                  <h1 className="font-normal text-base text-black opacity-90">
                     Creator
                   </h1>
                 </div>

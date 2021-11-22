@@ -1,5 +1,9 @@
 nav{
     background: rgb(3, 36, 63);
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 10;
 }
 .nav-flex{
   display: flex;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Spinner from "../component/Spinner";
 import Nav from "../component/Nav";
 import Cards from "../component/Cards";
 import "./Movies.css";
@@ -32,14 +33,17 @@ const Tv = () => {
           <h1>Popular Tv</h1>
         </div>
         <div className="allmovies-grid">{data && <Cards shows={data} />}</div>
-        <button
-          className="loadmore"
-          onClick={() => {
-            setPage(page + 1);
-          }}
-        >
-          Load more
-        </button>
+        {data.length === 0 && <Spinner />}
+        {data.length > 0 && (
+          <button
+            className="loadmore"
+            onClick={() => {
+              setPage(page + 1);
+            }}
+          >
+            Load more
+          </button>
+        )}
       </div>
     </>
   );

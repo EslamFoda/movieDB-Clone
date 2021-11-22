@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Nav from "../component/Nav";
 import "./Search.css";
+import Spinner from "../component/Spinner";
 import { useParams } from "react-router";
 import SearchCards from "../component/SearchCards";
 const Search = () => {
@@ -29,14 +30,14 @@ const Search = () => {
       <Nav />
       <div className="search-section">
         {data && <SearchCards results={data} page={page} />}
-        {data.length && (
+        {data.length && data.length > 0 && (
           <div>
             {page > 1 ? (
               <button
                 className="previous-btn"
                 onClick={() => {
                   setPage(page - 1);
-                  window.scroll(0, 0);
+                  window.scroll({ top: 0, behavior: "smooth" });
                 }}
               >
                 Previous
@@ -59,6 +60,7 @@ const Search = () => {
             </button>
           </div>
         )}
+        {data.length === 0 && <Spinner />}
       </div>
     </>
   );

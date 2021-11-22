@@ -66,6 +66,7 @@ H4 {
 .recommend-img-container {
   border-radius: 0.5rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .recommend-img-container img {
   width: 100%;

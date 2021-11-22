@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Details from "../component/Details/Details";
 import Nav from "../component/Nav";
+import Spinner from "../component/Spinner";
 import Credits from "../component/Details/Credits";
 import Reviews from "../component/Details/Reviews";
 import Recommends from "../component/Details/Recommends";
@@ -88,6 +89,7 @@ const TvDetails = () => {
       {credits && <Credits credits={credits} />}
       {show && reviews && <Reviews reviews={reviews} tv={show} />}
       {recommends && <Recommends recommends={recommends} />}
+      {!show && !credits && !reviews && !recommends && <Spinner />}
       {show && credits && reviews && recommends && <Footer />}
     </>
   );

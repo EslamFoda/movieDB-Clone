@@ -9,7 +9,6 @@ const Popular = () => {
   const [shows, setShows] = useState(null);
   const [movies, setMovies] = useState(null);
   const handleSwitch = (e) => {
-    
     const firstTv = document.querySelector(".ontv.first");
     const secTv = document.querySelector(".ontv.sec");
     const wrapperFirst = document.querySelector(".ontv-wrapper.first");
@@ -38,7 +37,7 @@ const Popular = () => {
   useEffect(() => {
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
-     
+
     axios
       .get(
         "https://api.themoviedb.org/3/tv/popular?api_key=ed1aa33b88ae96e77b8399f90b321035&language=en-US&page=1",
@@ -49,12 +48,12 @@ const Popular = () => {
       .then((res) => {
         setShows(res.data.results);
       });
-      return () => source.cancel
+    return () => source.cancel;
   }, [axios]);
 
   useEffect(() => {
-      const CancelToken = axios.CancelToken;
-      const source = CancelToken.source();
+    const CancelToken = axios.CancelToken;
+    const source = CancelToken.source();
     axios
       .get(
         "https://api.themoviedb.org/3/movie/popular?api_key=ed1aa33b88ae96e77b8399f90b321035&language=en-US&page=1",
@@ -65,7 +64,7 @@ const Popular = () => {
       .then((res) => {
         setMovies(res.data.results);
       });
-       return () => source.cancel;
+    return () => source.cancel;
   }, [axios]);
   const hideActive = () => {
     const tvWrapper = document.querySelectorAll(".ontv-wrapper");

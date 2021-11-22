@@ -6,7 +6,7 @@ import Credits from "../component/Details/Credits";
 import Reviews from "../component/Details/Reviews";
 import Recommends from "../component/Details/Recommends";
 import Footer from "../component/Footer";
-
+import Spinner from "../component/Spinner";
 const MovieDetails = () => {
   const { id } = useParams();
   const [show, setShow] = useState(null);
@@ -88,6 +88,7 @@ const MovieDetails = () => {
       {credits && <Credits credits={credits} />}
       {show && reviews && <Reviews reviews={reviews} tv={show} />}
       {recommends && <Recommends recommends={recommends} />}
+      {!show && !credits && !reviews && !recommends && <Spinner />}
       {show && credits && reviews && recommends && <Footer />}
     </>
   );
