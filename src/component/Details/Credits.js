@@ -67,6 +67,8 @@ const Credits = ({ credits }) => {
                 <div className="cast-img-container">
                   {cast.profile_path ? (
                     <LazyLoadImage
+                      width="100%"
+                      height="100%"
                       effect="blur"
                       src={`https://image.tmdb.org/t/p/w400${cast.profile_path}`}
                       alt=""

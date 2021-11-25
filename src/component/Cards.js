@@ -14,6 +14,8 @@ const Cards = ({ shows }) => {
                   <div className="show-img-container">
                     <LazyLoadImage
                       effect="blur"
+                      width="100%"
+                      height="100%"
                       src={
                         `https://image.tmdb.org/t/p/w500${show.poster_path}` ||
                         `https://image.tmdb.org/t/p/w500${show.backdrop_path}`
@@ -30,6 +32,8 @@ const Cards = ({ shows }) => {
                   <div className="show-img-container">
                     <LazyLoadImage
                       effect="blur"
+                      width="100%"
+                      height="100%"
                       src={
                         `https://image.tmdb.org/t/p/w500${show.poster_path}` ||
                         `https://image.tmdb.org/t/p/w500${show.backdrop_path}`
